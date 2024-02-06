@@ -26,20 +26,20 @@ import {
   Text,
   UnorderedList,
   useDisclosure,
-} from "@chakra-ui/react";
-import Logo from "../Image/airbnb.png";
-import Home from "../Image/icons8-home-24.png";
-import InterCenter from "../Image/interface-center.jpg";
-import World from "../Image/world-map.png";
-import Twt from "../Image/icons8-twitter-24.png";
-import Face from "../Image/icons8-facebook-24.png";
-import İnsta from "../Image/icons8-instagram-logo-24.png";
-import React, { useState } from "react";
-import { CheckIcon, CloseIcon } from "@chakra-ui/icons";
+} from '@chakra-ui/react'
+import Logo from '../Image/airbnb.png'
+import Home from '../Image/icons8-home-24.png'
+import InterCenter from '../Image/interface-center.jpg'
+import World from '../Image/world-map.png'
+import Twt from '../Image/icons8-twitter-24.png'
+import Face from '../Image/icons8-facebook-24.png'
+import İnsta from '../Image/icons8-instagram-logo-24.png'
+import React, { useState } from 'react'
+import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 
 function Interface() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [silider, setSilender] = useState();
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [slider, setSlider] = useState('')
   return (
     <Flex flexDirection="column">
       <Box
@@ -68,8 +68,8 @@ function Interface() {
               onClick={onOpen}
               p="25px"
             >
-              {" "}
-              <Image src={Home} mr="5px" />{" "}
+              {' '}
+              <Image src={Home} mr="5px" />{' '}
               <Text
                 fontFamily="Circular, -apple-system, BlinkMacSystemFont, Roboto,  sans-serif;"
                 fontWeight="500"
@@ -99,9 +99,9 @@ function Interface() {
             Tahmini kazancınız
           </Box>
           <Box w="full">
-            <Box fontSize="14px">{silider}₺</Box>
+            <Box fontSize="14px">{slider}₺</Box>
             <Box fontSize="14px" fontWeight="450">
-              {silider / 1091} gece (tahmini olarak gecelik 1.091 ₺ üzerinden)
+              {slider / 1091} gece (tahmini olarak gecelik 1.091 ₺ üzerinden)
             </Box>
             <Box>
               <Slider
@@ -109,7 +109,7 @@ function Interface() {
                 min={1091}
                 max={32730}
                 step={1091}
-                onChange={(val) => setSilender(val)}
+                onChange={(val) => setSlider(val)}
               >
                 <SliderTrack bg="red.100">
                   <SliderFilledTrack bg="#e61e4d" />
@@ -454,10 +454,10 @@ function Interface() {
               >
                 Karşılaştırma, 22 Ekim itibarıyla herkese açık bilgilere ve
                 büyük rakiplerin sunduğu ücretsiz tekliflere dayanır.
-                Ayrıntıları ve istisnaları{" "}
+                Ayrıntıları ve istisnaları{' '}
                 <Link textDecoration="underline" color="black" fontWeight="600">
                   burada
-                </Link>{" "}
+                </Link>{' '}
                 bulabilirsiniz.
               </Text>
             </Flex>
@@ -870,10 +870,10 @@ function Interface() {
               <Image width="18px" h="18px" src={World} />
               <Link>Türkçe (TR)</Link> ₺<Link>TRY</Link>
               <Box display="flex" justifyContent="center" gap="5px">
-                {" "}
-                <Image src={Face} w="18px" h="18px" />{" "}
-                <Image src={Twt} w="18px" h="18px" borderRadius="30" />{" "}
-                <Image src={İnsta} w="18px" h="18px" borderRadius="30" />{" "}
+                {' '}
+                <Image src={Face} w="18px" h="18px" />{' '}
+                <Image src={Twt} w="18px" h="18px" borderRadius="30" />{' '}
+                <Image src={İnsta} w="18px" h="18px" borderRadius="30" />{' '}
               </Box>
             </Box>
           </Box>
@@ -895,7 +895,7 @@ function Interface() {
         </ModalContent>
       </Modal>
     </Flex>
-  );
+  )
 }
 
-export default Interface;
+export default Interface

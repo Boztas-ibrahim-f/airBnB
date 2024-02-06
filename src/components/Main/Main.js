@@ -46,6 +46,7 @@ function Main() {
             md: '0 16px',
             lg: '0 42px',
           }}
+          marginBottom="50px"
         >
           <MainData />
         </Grid>
