@@ -1,4 +1,4 @@
-import { ChevronUpIcon, SearchIcon } from "@chakra-ui/icons";
+import { ChevronUpIcon } from '@chakra-ui/icons'
 import {
   Box,
   Button,
@@ -10,14 +10,14 @@ import {
   ModalOverlay,
   useBreakpointValue,
   useDisclosure,
-} from "@chakra-ui/react";
-import { CiHeart } from "react-icons/ci";
-import { HiOutlineUserCircle } from "react-icons/hi2";
-import { IoSearchOutline } from "react-icons/io5";
+} from '@chakra-ui/react'
+import { CiHeart } from 'react-icons/ci'
+import { HiOutlineUserCircle } from 'react-icons/hi2'
+import { IoSearchOutline } from 'react-icons/io5'
 
-function Alt() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  let md = useBreakpointValue({ base: false, md: true });
+function Footer() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  let md = useBreakpointValue({ base: false, md: true })
   return (
     <Box h="full" width="full">
       {md ? (
@@ -39,27 +39,27 @@ function Alt() {
           >
             <Box display="flex" fontWeight="600" gap="6px">
               <Box>© 2023 Airbnb,Inc</Box>•
-              <Box _hover={{ textDecoration: "underline", cursor: "pointer" }}>
+              <Box _hover={{ textDecoration: 'underline', cursor: 'pointer' }}>
                 Gizlilik
               </Box>
               •
-              <Box _hover={{ textDecoration: "underline", cursor: "pointer" }}>
+              <Box _hover={{ textDecoration: 'underline', cursor: 'pointer' }}>
                 Şartlar
               </Box>
               •
-              <Box _hover={{ textDecoration: "underline", cursor: "pointer" }}>
+              <Box _hover={{ textDecoration: 'underline', cursor: 'pointer' }}>
                 Site Haritası
               </Box>
             </Box>
             <Box display="flex" alignItems="center" gap="6px">
               <Box fontWeight="600">₺ TRY</Box>
-              <Box _hover={{ cursor: "pointer" }} onClick={onOpen}>
+              <Box _hover={{ cursor: 'pointer' }} onClick={onOpen}>
                 <Button
                   colorScheme="none"
-                  _hover={{ textDecoration: "underline" }}
+                  _hover={{ textDecoration: 'underline' }}
                   color="gray.800"
                 >
-                  Destek ve Kaynaklar{" "}
+                  Destek ve Kaynaklar
                 </Button>
                 <ChevronUpIcon />
               </Box>
@@ -100,15 +100,15 @@ function Alt() {
                     justifyContent="center"
                     flex="1 1"
                   >
-                    <Box fontSize="3xl" >
-                    <IoSearchOutline />
+                    <Box fontSize="3xl">
+                      <IoSearchOutline />
                     </Box>
-                    <Box fontSize="12px" fontWeight="500" >Keşfedin</Box>
+                    <Box fontSize="12px" fontWeight="500">
+                      Keşfedin
+                    </Box>
                   </Box>
                 </Box>
-                <Box display="flex"
-                    flexDirection="column"
-                    alignItems="center">
+                <Box display="flex" flexDirection="column" alignItems="center">
                   <Box
                     display="flex"
                     flexDirection="column"
@@ -119,13 +119,17 @@ function Alt() {
                     <Box color="black" fontSize="3xl">
                       <CiHeart />
                     </Box>
-                    <Box fontSize="12px" fontWeight="500">Favoriler</Box>
+                    <Box fontSize="12px" fontWeight="500">
+                      Favoriler
+                    </Box>
                   </Box>
                 </Box>
-                <Box display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                    justifyContent="center">
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                  justifyContent="center"
+                >
                   <Box
                     display="flex"
                     flexDirection="column"
@@ -133,9 +137,11 @@ function Alt() {
                     flex="1 1"
                   >
                     <Box fontSize="3xl">
-                    <HiOutlineUserCircle />
+                      <HiOutlineUserCircle />
                     </Box>
-                    <Box fontSize="12px" fontWeight="500">Giriş Yap</Box>
+                    <Box fontSize="12px" fontWeight="500">
+                      Giriş Yap
+                    </Box>
                   </Box>
                 </Box>
               </Box>
@@ -157,7 +163,7 @@ function Alt() {
             px="6px"
           >
             <ModalCloseButton
-              _hover={{ bgColor: "white", color: "red" }}
+              _hover={{ bgColor: 'white', color: 'red' }}
               right="auto"
             />
             <ModalBody display="flex" justifyContent="center" fontFamily="">
@@ -214,7 +220,7 @@ function Alt() {
         </Modal>
       </Box>
     </Box>
-  );
+  )
 }
 
-export default Alt;
+export default Footer
