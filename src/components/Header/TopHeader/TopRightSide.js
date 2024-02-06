@@ -2,9 +2,10 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import icon from "../../../Image/user.png"
 import { Box, Button, Image, Menu, MenuButton, MenuDivider, MenuItem, MenuList, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react'
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function TopRightSide() {
+  const navigate = useNavigate()
     let lg = useBreakpointValue({ base: false, lg: true });
   return (
     <>
@@ -23,7 +24,7 @@ function TopRightSide() {
                   textColor="gray.600"
                   fontWeight="700"
                   variant="ghost"
-                  onClick={() => Navigate("/interface")}
+                  onClick={() => navigate("/interface")}
                 >
                   Evinizi Airbnb'ye taşıyın
                 </Button>
@@ -34,7 +35,7 @@ function TopRightSide() {
                   borderRadius="50"
                   colorScheme="gray"
                   variant="ghost"
-                  onClick={() => Navigate("/interface")}
+                  onClick={() => navigate("/interface")}
                 >
                   Keşfet
                 </Button>

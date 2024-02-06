@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Routes, Outlet } from "react-router-dom";
 import Interface from "./Pages/Interface";
-import App from "./App";
+
 import { ChakraProvider } from "@chakra-ui/react";
+import App from "./Pages/App";
+
 
 
 export default function AppRouter() {
